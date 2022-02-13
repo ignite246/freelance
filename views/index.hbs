@@ -12,7 +12,7 @@
 
     <title>Welcome Home</title>
   </head>
-  <body>
+  <section>
     {{>navbar data = details}}
 
     {{!-- {{details}} --}}
@@ -20,6 +20,28 @@
     {{>slider slides = slides}}
 
     {{!-- {{slides}} --}}
+
+
+    {{!-- banner1_section --}}
+
+    <section id="banner1_section" class="background1">
+
+      <div class="container py-4">
+      
+        <div class="row">
+          <div class="col-md-12 text-center text-white p-2">
+            <h2 class="py-4">Start Learning New Technology</h2>
+            <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa placeat deserunt, accusamus est dolor aut tempora repudiandae maiores natus rerum! Voluptate molestias consectetur eius delectus officiis accusantium soluta repellat numquam.</p>
+            <button class="btn btn-lg btn-outline-primary">Start Learning Now 👌</button>
+          
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+
+    {{!-- services_section --}}
 
 
     <section id="services_section" class="py-3 background2">
@@ -36,33 +58,34 @@
 
           {{#each services}}
 
-          <div class="col-md-3 offset-md-1 p-2">
-
-            <div class="card my-2">
-              <div class="card-header text-center services_icons">
-                <i class="{{this.icon}} text-primary"></i>
-              </div>
-              <div class="card-body">
-                  
-                  <div class="card-title">
-                    <h5>{{this.title}}</h5>
-                    <p>{{this.description}}</p>
-                  </div>
-              </div>
-              <div class="card-footer">
-                  <a href="{{this.linkUrl}}" class="btn btn-sm btn-outline-warning">{{this.linkName}}</a>
-                  <a href="#!" class="btn btn-sm btn-outline-primary">Support</a>
+            <div class="col-md-3 offset-md-1 p-2">
+              <div class="card my-2">
+                <div class="card-header text-center services_icons">
+                  <i class="{{this.icon}} text-primary"></i>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="card-title">
+                      <h5>{{this.title}}</h5>
+                      <p>{{this.description}}</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="{{this.linkUrl}}" class="btn btn-sm btn-outline-warning">{{this.linkName}}</a>
+                    <a href="#!" class="btn btn-sm btn-outline-primary">Support</a>
+                </div>
               </div>
             </div>
+
+          {{/each}}
+
         </div>
-
-    {{/each}}
-
       </div>
-     </div>
     </section>
 
-    <section id="contact_us_section" class="py-4 background1">
+    {{!-- contact_us_section --}}
+
+    <section id="contact_section" class="py-4 background1">
       <div class="container">
 
         <div class="row py-4">
@@ -105,6 +128,87 @@
       </div>
     
     </section>
+
+
+    {{!-- banner2_section --}}
+
+    <section id="banner2_section" class="background2">
+    
+      <div class="container py-2">
+        <div class="row">
+
+          {{!-- first column --}}
+          <div class="col-md-6 text-center text-white pt-5">
+          
+             <h3>We educate people, not just teach</h3> 
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum, placeat quaerat dolores sint rem vel. Commodi, molestiae id illo, quasi officiis laudantium deserunt corrupti, harum labore in atque iusto.</p>
+
+             <button class="btn btn-primary">
+              Click Here
+             </button>
+
+          </div>
+
+          {{!-- second column --}}
+          <div class="col-md-6 text-center">
+            <img class="img-fluid" src="/static_resources/images/student.svg" alt="banner" style="max-height:300px;">
+          </div>
+        
+        </div>
+      </div>
+
+    </section>
+
+    {{!-- banner3_section --}}
+
+    <section id="banner3_section" class="background2">
+       <div class="container py-2">
+        <div class="row">
+
+          {{!-- first column --}}
+
+          <div class="col-md-6 p-4 text-center">
+            <img class="img-fluid" src="/static_resources/images/girl.svg" alt="banner" style="max-height:300px;">
+          </div>
+          
+
+        {{!-- second column --}}
+
+        <div class="col-md-6 text-center text-white pt-5">
+          
+             <h3>We educate people, not just teach</h3> 
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum, placeat quaerat dolores sint rem vel. Commodi, molestiae id illo, quasi officiis laudantium deserunt corrupti, harum labore in atque iusto.</p>
+
+             <button class="btn btn-md btn-primary">
+              Click Here
+             </button>
+
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="about_section" class="background3">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-12 text-center text-primary">
+          <h3>About this site</h3>
+            <p class="py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur lorem. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur lorem. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur lorem. Lorem ipsum dolor sit amet
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur lorem. Lorem ipsum dolor sit amet
+            </p>
+            <button class="btn btn-md btn-success">Know More About us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  {{!-- footer_section --}}
+
+    {{>footer}}
 
 
 
